@@ -12,7 +12,7 @@
                 @endcan
                 
             </div>
-        </div>
+        </div> 
     </div>
 
     @if ($message = Session::get('success'))
