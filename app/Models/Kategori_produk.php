@@ -13,3 +13,4 @@ class Kategori_produk extends Model
         'keterangan',
     ];
 }
+// hasmany ke produk

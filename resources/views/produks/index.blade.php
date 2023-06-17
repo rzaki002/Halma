@@ -10,7 +10,6 @@
                 @can('produk-create')
                     <a class="btn btn-success" href="{{ route('produks.create') }}"> Create New Product</a>
                 @endcan
-                
             </div>
         </div> 
     </div>

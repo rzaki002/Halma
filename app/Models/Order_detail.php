@@ -17,3 +17,4 @@ class Order_detail extends Model
         'file',
     ];
 }
+// belongsto order

@@ -15,9 +15,9 @@ class ProdukController extends Controller
         $this->middleware('permission:produk-list|produk-create|produk-edit|produk-delete',
             ['only' => ['index', 'show']]
         );
-        $this->middleware('permission: produk-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission: produk-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission: produk-delete', ['only' => ['destroy']]);
+        $this->middleware('permission:produk-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:produk-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:produk-delete', ['only' => ['destroy']]);
     }
     public function index()
     {
