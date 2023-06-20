@@ -9,8 +9,12 @@ class Kategori_produk extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'nama', 
+        'nama',
         'keterangan',
     ];
+    // hasmany ke produk
+    public function produk()
+    {
+        return $this->hasMany(Produk::class);
+    }
 }
-// hasmany ke produk

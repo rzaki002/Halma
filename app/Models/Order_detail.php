@@ -9,12 +9,17 @@ class Order_detail extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id_order', 
-        'id_produk', 
-        'qty', 
-        'harga', 
-        'deskripsi', 
+        'id_order',
+        'id_produk',
+        'qty',
+        'harga',
+        'deskripsi',
         'file',
     ];
+
+    // belongsto order
+    public function order()
+    {
+        return $this->belongsTo(Order::class, 'id_order');
+    }
 }
-// belongsto order

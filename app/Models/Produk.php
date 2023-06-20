@@ -18,7 +18,7 @@ class Produk extends Model
         'gambar',
     ];
 
-    public function satuans(){
+    public function satuan(){
         return $this->belongsTo(Satuan::class,'id_kategori');
     }
 }

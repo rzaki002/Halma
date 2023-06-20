@@ -9,13 +9,14 @@ class Customer extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'no_hp', 
-        'nama', 
-        'harga', 
-        'email', 
+        'no_hp',
+        'nama',
+        'harga',
+        'email',
         'password'
     ];
-    public function Orders(){
+    public function orders()
+    {
         return $this->hasMany(Kategori_produk::class);
     }
 }
