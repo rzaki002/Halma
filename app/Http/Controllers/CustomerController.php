@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 
@@ -48,6 +49,12 @@ class CustomerController extends Controller
         ]);
 
         Customer::create($request->all());
+
+        $data = [
+            'name'=> $request->nama,
+            'password'=>bcrypt($request->password)
+        ];
+        User::create($data);
         return redirect()->route('customers.index')
             ->with('success', 'Customers created successfully.');
     }

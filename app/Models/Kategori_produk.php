@@ -13,8 +13,11 @@ class Kategori_produk extends Model
         'keterangan',
     ];
     // hasmany ke produk
-    public function produk()
-    {
-        return $this->hasMany(Produk::class);
+    // public function produk()
+    // {
+    //     return $this->hasOne(Produk::class);
+    // }
+    public function produk(){
+        return $this->hasMany(Produk::class,'id_kategori');
     }
 }

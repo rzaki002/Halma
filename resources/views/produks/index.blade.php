@@ -24,7 +24,7 @@
         <tr>
             <th>No</th>
             <th>Nama</th>
-            <th>Id Kategori</th>
+            <th>Kategori</th>
             <th>Harga</th>
             <th>Id Satuan</th>
             <th>Keterangan</th>
@@ -32,12 +32,13 @@
             <th width="280px">Action</th>
         </tr>
         @foreach ($produks as $produk)
+        {{-- <?php dd($produk->kategori);?> --}}
             <tr>
                 <td>{{ ++$i }}</td>
                 <td>{{ $produk->nama }}</td>
-                <td>{{ $produk->id_kategori }}</td>
+                <td>{{ $produk->kategori->nama}}</td>
                 <td>{{ $produk->harga }}</td>
-                <td>{{ $produk->id_satuan }}</td>
+                <td>{{ $produk->satuan->nama }}</td>
                 <td>{{ $produk->keterangan }}</td>
                 <td><img src="/gambar/{{ $produk->gambar }}" width="100px" /></td>
                 <td>

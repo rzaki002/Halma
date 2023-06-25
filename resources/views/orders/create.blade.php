@@ -28,12 +28,17 @@
         @csrf
 
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Id Customer:</strong>
-                    <input type="text" name="id_customer" class="form-control" placeholder="Id Customer">
-                </div>
-            </div>
+            <div class="form-group">
+                <strong>Customer</strong>
+                <select name="id_customer" class="form-control dropdown">
+                    <option value="">-- Select Customer --</option>
+                    @foreach ($customers as $customer)
+                        <option value="{{$customer->id}}">
+                            {{$customer->nama}}
+                        </option>                        
+                    @endforeach
+                </select>
+             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Catatan:</strong>

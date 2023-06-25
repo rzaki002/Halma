@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori_produk;
 use Illuminate\Http\Request;
 use App\Models\Produk;
 
@@ -24,6 +25,8 @@ class ProdukController extends Controller
         $produks = Produk::latest()->paginate(5);
         return view('produks.index', compact('produks'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
+        // $produk = Produk::all();
+        // dd($produk->kategori);
     }
 
     /**

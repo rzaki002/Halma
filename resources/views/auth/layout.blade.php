@@ -3,10 +3,9 @@
 
 <head>
     <title>Halma Grafika</title>
-    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.
-3/css/bootstrap.min.css"> --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.
+3/css/bootstrap.min.css"> 
+    
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Roboto:400, 400italic, 600, 600italic, 700, 700italic');
 
@@ -73,13 +72,20 @@ navbar-laravel">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">Register</a>
                         </li>
-                        
+
                     @endguest
-                    <li><a class="nav-link" href="{{ route('users.index') }}">Manage User</a></li>
+                    @if (Auth::check())
+                        <li><a class="nav-link" href="{{ route('users.index') }}">Manage User</a></li>
                         <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}">Logout</a>
-                    </li>
+                        <li><a class="nav-link" href="{{ route('produks.index') }}">Manage Produk</a></li>
+                        <li><a class="nav-link" href="{{ route('kategori_produks.index') }}">Manage Kategori Produk</a></li>
+                        <li><a class="nav-link" href="{{ route('orders.index') }}">Manage Order</a></li>
+                        <li><a class="nav-link" href="{{ route('order_details.index') }}">Manage Order Detail</a></li>
+                        <li><a class="nav-link" href="{{ route('customers.index') }}">Manage Customer</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+                        </li>
+                    @endif
                 </ul>
 
             </div>

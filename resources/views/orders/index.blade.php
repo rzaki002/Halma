@@ -21,7 +21,7 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Id Customer</th>
+            <th>Customer</th>
             <th>Catatan</th>
             <th>Status</th>
             <th>Status Pengambilan</th>
@@ -33,7 +33,7 @@
         @foreach ($orders as $order)
             <tr>
                 <td>{{ ++$i }}</td>
-                <td>{{ $order->id_customer }}</td>
+                <td>{{ $order->customer->nama }}</td>
                 <td>{{ $order->catatan }}</td>
                 <td>{{ $order->status }}</td>
                 <td>{{ $order->status_pengambilan }}</td>

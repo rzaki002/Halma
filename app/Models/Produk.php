@@ -19,6 +19,9 @@ class Produk extends Model
     ];
 
     public function satuan(){
-        return $this->belongsTo(Satuan::class,'id_kategori');
+        return $this->belongsTo(Satuan::class,'id');
+    }
+    public function kategori(){
+        return $this->belongsTo(Kategori_produk::class,'id');
     }
 }
