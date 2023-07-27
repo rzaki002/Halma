@@ -1940,7 +1940,7 @@
                 <a href="product-details-default.html" class="content">
                     <div class="inner">
                         <h4 class="title">Easy chairs</h4>
-                        <h6 class="sub-title">20 products</h6>
+                        <h6 class="sub-title"></h6>
                     </div>
                     <span class="round-btn"><i class="ion-ios-arrow-thin-right"></i></span>
                 </a>
