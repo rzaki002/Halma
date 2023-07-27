@@ -30,15 +30,13 @@
                 <div class="container">
                     <div class="col-12 d-flex align-items-center justify-content-between">
                         <div class="header-top-left">
-                            <div
-                                class="header-top-contact header-top-contact-color--white header-top-contact-hover-color--green">
+                            <div class="header-top-contact header-top-contact-color--white header-top-contact-hover-color--green">
                                 <a href="tel:0123456789" class="icon-space-right"><i class="icon-call-in"></i>+62
                                     811-7877-722</a>
-                                <a href="mailto:demo@example.com" class="icon-space-right"><i
-                                        class="icon-envelope"></i>halmagrafika@gmail.com</a>
+                                <a href="mailto:demo@example.com" class="icon-space-right"><i class="icon-envelope"></i>halmagrafika@gmail.com</a>
                             </div>
                         </div>
-                        
+
                         <div class="header-top-right">
                             @if (Route::has('login'))
                             <div class="sm:fixed sm:top-0 sm:right-0 p-2 text-right">
@@ -47,7 +45,7 @@
                                 <a href="{{ url('/logout') }}" class="font-semibold text-white-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">logout</a>
                                 @else
                                 <a href="{{ route('login') }}" class="font-semibold text-white-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Login</a>
-                    
+
                                 @if (Route::has('register'))
                                 <a href="{{ route('register') }}" class="ml-4 font-semibold text-white-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
                                 @endif
@@ -55,8 +53,8 @@
                             </div>
                             @endif
                         </div>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -79,13 +77,11 @@
                                 <nav>
                                     <ul>
                                         <li class="has-dropdown">
-                                            <a class="active main-menu-link" href="index.html">Home <i
-                                                    class="fa fa-angle-down"></i></a>
+                                            <a class="active main-menu-link" href="index.html">Home <i class="fa fa-angle-down"></i></a>
                                         </li>
                                         {{-- kategori --}}
                                         <li class="has-dropdown has-megaitem">
-                                            <a href="product-details-default.html">Kategori <i
-                                                    class="fa fa-angle-down"></i></a>
+                                            <a href="product-details-default.html">Kategori <i class="fa fa-angle-down"></i></a>
                                             <!-- Mega Menu -->
                                             <div class="mega-menu">
                                                 <ul class="mega-menu-inner">
@@ -152,15 +148,13 @@
                                                 </ul>
                                                 <div class="menu-banner">
                                                     <a href="#" class="menu-banner-link">
-                                                        <img class="menu-banner-img"
-                                                            src="assets/images/banner/menu-banner.jpg" alt="">
+                                                        <img class="menu-banner-img" src="assets/images/banner/menu-banner.jpg" alt="">
                                                     </a>
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="has-dropdown has-megaitem">
-                                            <a href="product-details-default.html">Shop <i
-                                                    class="fa fa-angle-down"></i></a>
+                                            <a href="product-details-default.html">Shop <i class="fa fa-angle-down"></i></a>
                                             <!-- Mega Menu -->
                                             <div class="mega-menu">
                                                 <ul class="mega-menu-inner">
@@ -229,13 +223,12 @@
                                                 </ul>
                                                 <div class="menu-banner">
                                                     <a href="#" class="menu-banner-link">
-                                                        <img class="menu-banner-img"
-                                                            src="assets/images/banner/menu-banner.jpg" alt="">
+                                                        <img class="menu-banner-img" src="assets/images/banner/menu-banner.jpg" alt="">
                                                     </a>
                                                 </div>
                                             </div>
                                         </li>
-                                        
+
                                         </li>
                                         <!-- <li class="has-dropdown">
                                             <a href="#">Pages <i class="fa fa-angle-down"></i></a> -->
@@ -545,8 +538,7 @@
                 <li class="offcanvas-cart-item-single">
                     <div class="offcanvas-cart-item-block">
                         <a href="#" class="offcanvas-cart-item-image-link">
-                            <img src="{{asset('halma-fe/assets/images/product/default/home-1/default-1.jpg')}}" alt=""
-                                class="offcanvas-cart-image">
+                            <img src="{{asset('halma-fe/assets/images/product/default/home-1/default-1.jpg')}}" alt="" class="offcanvas-cart-image">
                         </a>
                         <div class="offcanvas-cart-item-content">
                             <a href="#" class="offcanvas-cart-item-link">Car Wheel</a>
@@ -563,8 +555,7 @@
                 <li class="offcanvas-cart-item-single">
                     <div class="offcanvas-cart-item-block">
                         <a href="#" class="offcanvas-cart-item-image-link">
-                            <img src="assets/images/product/default/home-2/default-1.jpg" alt=""
-                                class="offcanvas-cart-image">
+                            <img src="assets/images/product/default/home-2/default-1.jpg" alt="" class="offcanvas-cart-image">
                         </a>
                         <div class="offcanvas-cart-item-content">
                             <a href="#" class="offcanvas-cart-item-link">Car Vails</a>
@@ -581,8 +572,7 @@
                 <li class="offcanvas-cart-item-single">
                     <div class="offcanvas-cart-item-block">
                         <a href="#" class="offcanvas-cart-item-image-link">
-                            <img src="assets/images/product/default/home-3/default-1.jpg" alt=""
-                                class="offcanvas-cart-image">
+                            <img src="assets/images/product/default/home-3/default-1.jpg" alt="" class="offcanvas-cart-image">
                         </a>
                         <div class="offcanvas-cart-item-content">
                             <a href="#" class="offcanvas-cart-item-link">Shock Absorber</a>
@@ -626,8 +616,7 @@
                 <li class="offcanvas-wishlist-item-single">
                     <div class="offcanvas-wishlist-item-block">
                         <a href="#" class="offcanvas-wishlist-item-image-link">
-                            <img src="assets/images/product/default/home-1/default-1.jpg" alt=""
-                                class="offcanvas-wishlist-image">
+                            <img src="assets/images/product/default/home-1/default-1.jpg" alt="" class="offcanvas-wishlist-image">
                         </a>
                         <div class="offcanvas-wishlist-item-content">
                             <a href="#" class="offcanvas-wishlist-item-link">Car Wheel</a>
@@ -644,8 +633,7 @@
                 <li class="offcanvas-wishlist-item-single">
                     <div class="offcanvas-wishlist-item-block">
                         <a href="#" class="offcanvas-wishlist-item-image-link">
-                            <img src="assets/images/product/default/home-2/default-1.jpg" alt=""
-                                class="offcanvas-wishlist-image">
+                            <img src="assets/images/product/default/home-2/default-1.jpg" alt="" class="offcanvas-wishlist-image">
                         </a>
                         <div class="offcanvas-wishlist-item-content">
                             <a href="#" class="offcanvas-wishlist-item-link">Car Vails</a>
@@ -662,8 +650,7 @@
                 <li class="offcanvas-wishlist-item-single">
                     <div class="offcanvas-wishlist-item-block">
                         <a href="#" class="offcanvas-wishlist-item-image-link">
-                            <img src="assets/images/product/default/home-3/default-1.jpg" alt=""
-                                class="offcanvas-wishlist-image">
+                            <img src="assets/images/product/default/home-3/default-1.jpg" alt="" class="offcanvas-wishlist-image">
                         </a>
                         <div class="offcanvas-wishlist-item-content">
                             <a href="#" class="offcanvas-wishlist-item-link">Shock Absorber</a>
@@ -689,8 +676,9 @@
     <div id="search" class="search-modal">
         <button type="button" class="close">×</button>
         <form>
-            <input type="search" placeholder="type keyword(s) here" />
+            <input id="hasil_voice" type="search" placeholder="type keyword(s) here" />
             <button type="submit" class="btn btn-lg btn-golden">Search</button>
+            <button type="button" onclick="recognition.start()" class="btn btn-lg btn-golden">Voice</button>
         </form>
     </div>
     <!-- End Offcanvas Search Bar Section -->
@@ -718,8 +706,7 @@
                                     <div class="hero-slider-content">
                                         <h4 class="subtitle">New Product</h4>
                                         <h2 class="title"><br> Kalender 2023 </h2>
-                                        <a href="product-details-default.html"
-                                            class="btn btn-lg btn-outline-golden">shop now </a>
+                                        <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">shop now </a>
                                     </div>
                                 </div>
                             </div>
@@ -740,8 +727,7 @@
                                     <div class="hero-slider-content">
                                         <h4 class="subtitle">Gratis Custom</h4>
                                         <h2 class="title">Custom <br> Card </h2>
-                                        <a href="product-details-default.html"
-                                            class="btn btn-lg btn-outline-golden">shop now </a>
+                                        <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">shop now </a>
                                     </div>
                                 </div>
                             </div>
@@ -762,8 +748,7 @@
                                     <div class="hero-slider-content">
                                         <h4 class="subtitle">Promo Custom</h4>
                                         <h2 class="title">Custom <br> Design Kaos </h2>
-                                        <a href="product-details-default.html"
-                                            class="btn btn-lg btn-outline-golden">shop now </a>
+                                        <a href="product-details-default.html" class="btn btn-lg btn-outline-golden">shop now </a>
                                     </div>
                                 </div>
                             </div>
@@ -853,8 +838,7 @@
 
                     <div class="col-lg-6 col-12 mb-6">
                         <!-- Start Banner Single Item -->
-                        <div class="banner-single-item banner-style-1 banner-animation img-responsive"
-                            data-aos="fade-up" data-aos-delay="0">
+                        <div class="banner-single-item banner-style-1 banner-animation img-responsive" data-aos="fade-up" data-aos-delay="0">
                             <div class="image">
                                 <img src="{{asset ('halma-fe/assets/images/banner/roleupbanner.jpg')}}" alt="">
                             </div>
@@ -862,10 +846,7 @@
                                 <!-- <h4 class="title" style="color: rgb(2, 2, 2);">Mini rechargeable
                                     Table Lamp - E216</h4>
                                 <h5 class="sub-title">We design your home</h5> -->
-                                <a href="product-details-default.html"
-                                    class="btn btn-lg btn-outline-golden icon-space-left"><span
-                                        class="d-flex align-items-center">Selengkapnya <i
-                                            class="ion-ios-arrow-thin-right"></i></span></a>
+                                <a href="product-details-default.html" class="btn btn-lg btn-outline-golden icon-space-left"><span class="d-flex align-items-center">Selengkapnya <i class="ion-ios-arrow-thin-right"></i></span></a>
                             </div>
                         </div>
                         <!-- End Banner Single Item -->
@@ -875,8 +856,7 @@
                         <div class="row mb-n6">
                             <!-- Start Banner Single Item -->
                             <div class="col-lg-6 col-sm-6 mb-6">
-                                <div class="banner-single-item banner-style-2 banner-animation img-responsive"
-                                    data-aos="fade-up" data-aos-delay="0">
+                                <div class="banner-single-item banner-style-2 banner-animation img-responsive" data-aos="fade-up" data-aos-delay="0">
                                     <div class="image">
                                         <img src="{{asset ('halma-fe/assets/images/banner/banner-style-2-img-1.jpg')}}" alt="">
                                     </div>
@@ -891,8 +871,7 @@
                             <!-- End Banner Single Item -->
                             <!-- Start Banner Single Item -->
                             <div class="col-lg-6 col-sm-6 mb-6">
-                                <div class="banner-single-item banner-style-2 banner-animation img-responsive"
-                                    data-aos="fade-up" data-aos-delay="200">
+                                <div class="banner-single-item banner-style-2 banner-animation img-responsive" data-aos="fade-up" data-aos-delay="200">
                                     <div class="image">
                                         <img src="{{asset ('halma-fe/assets/images/banner/banner-style-2-img-2.jpg')}}" alt="">
                                     </div>
@@ -907,8 +886,7 @@
                             <!-- End Banner Single Item -->
                             <!-- Start Banner Single Item -->
                             <div class="col-lg-6 col-sm-6 mb-6">
-                                <div class="banner-single-item banner-style-2 banner-animation img-responsive"
-                                    data-aos="fade-up" data-aos-delay="0">
+                                <div class="banner-single-item banner-style-2 banner-animation img-responsive" data-aos="fade-up" data-aos-delay="0">
                                     <div class="image">
                                         <img src="{{asset ('halma-fe/assets/images/banner/banner-style-2-img-3.jpg')}}" alt="">
                                     </div>
@@ -923,8 +901,7 @@
                             <!-- End Banner Single Item -->
                             <!-- Start Banner Single Item -->
                             <div class="col-lg-6 col-sm-6 mb-6">
-                                <div class="banner-single-item banner-style-2 banner-animation img-responsive"
-                                    data-aos="fade-up" data-aos-delay="200">
+                                <div class="banner-single-item banner-style-2 banner-animation img-responsive" data-aos="fade-up" data-aos-delay="200">
                                     <div class="image">
                                         <img src="{{asset ('halma-fe/assets/images/banner/banner-style-2-img-4.jpg')}}" alt="">
                                     </div>
@@ -984,13 +961,10 @@
                                             </div>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1027,13 +1001,10 @@
                                             </div>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1070,13 +1041,10 @@
                                             </div>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1110,13 +1078,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1150,13 +1115,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1190,13 +1152,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1230,13 +1189,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1264,28 +1220,25 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                           @if (!Auth::check())
-                                           <a href="login" class="image-link">
-                                            <img src="{{asset ('halma-fe/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
-                                            <img src="{{asset ('')}}assets/images/product/default/home-1/default-9.jpg" alt="">
-                                        </a>
-                                            
-                                        @else
-                                        <a href="login" class="image-link">
-                                            <img src="{{asset ('')}}assets/images/product/default/home-1/default-6.jpg" alt="">
-                                            <img src="{{asset ('')}}assets/images/product/default/home-1/default-9.jpg" alt="">
-                                        </a>
-                                            
-                                           @endif
+                                            @if (!Auth::check())
+                                            <a href="login" class="image-link">
+                                                <img src="{{asset ('halma-fe/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
+                                                <img src="{{asset ('')}}assets/images/product/default/home-1/default-9.jpg" alt="">
+                                            </a>
+
+                                            @else
+                                            <a href="login" class="image-link">
+                                                <img src="{{asset ('')}}assets/images/product/default/home-1/default-6.jpg" alt="">
+                                                <img src="{{asset ('')}}assets/images/product/default/home-1/default-9.jpg" alt="">
+                                            </a>
+
+                                            @endif
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1319,13 +1272,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1362,13 +1312,10 @@
                                             </div>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1402,13 +1349,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1442,13 +1386,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1492,8 +1433,7 @@
             <div class="row">
                 <div class="col-xl-8 offset-xl-2">
                     <!-- Start Banner Single Item -->
-                    <div class="banner-single-item banner-style-3 banner-animation img-responsive" data-aos="fade-up"
-                        data-aos-delay="0">
+                    <div class="banner-single-item banner-style-3 banner-animation img-responsive" data-aos="fade-up" data-aos-delay="0">
                         <div class="image">
                             <img class="img-fluid" src="{{asset ('')}}assets/images/banner/banner-style-3-img-1.jpg" alt="">
                         </div>
@@ -1501,10 +1441,7 @@
                             <h3 class="title">Modern Furniture
                                 Basic Collection</h3>
                             <h5 class="sub-title">We design your home more beautiful</h5>
-                            <a href="product-details-default.html"
-                                class="btn btn-lg btn-outline-golden icon-space-left"><span
-                                    class="d-flex align-items-center">discover now <i
-                                        class="ion-ios-arrow-thin-right"></i></span></a>
+                            <a href="product-details-default.html" class="btn btn-lg btn-outline-golden icon-space-left"><span class="d-flex align-items-center">discover now <i class="ion-ios-arrow-thin-right"></i></span></a>
                         </div>
                     </div>
                     <!-- End Banner Single Item -->
@@ -1551,13 +1488,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1591,13 +1525,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1631,13 +1562,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1671,13 +1599,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1714,13 +1639,10 @@
                                             </div>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1757,13 +1679,10 @@
                                             </div>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1800,13 +1719,10 @@
                                             </div>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1840,13 +1756,10 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">Add to Cart</a>
                                                 </div>
                                                 <div class="action-link-right">
-                                                    <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalQuickview"><i
-                                                            class="icon-magnifier"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"><i class="icon-magnifier"></i></a>
                                                     <a href="wishlist.html"><i class="icon-heart"></i></a>
                                                     <a href="compare.html"><i class="icon-shuffle"></i></a>
                                                 </div>
@@ -1887,8 +1800,7 @@
     <div class="banner-section">
         <div class="banner-wrapper clearfix">
             <!-- Start Banner Single Item -->
-            <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive"
-                data-aos="fade-up" data-aos-delay="0">
+            <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive" data-aos="fade-up" data-aos-delay="0">
                 <div class="image">
                     <img class="img-fluid" src="{{asset ('')}}assets/images/banner/banner-style-4-img-1.jpg" alt="">
                 </div>
@@ -1902,8 +1814,7 @@
             </div>
             <!-- End Banner Single Item -->
             <!-- Start Banner Single Item -->
-            <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive"
-                data-aos="fade-up" data-aos-delay="200">
+            <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive" data-aos="fade-up" data-aos-delay="200">
                 <div class="image">
                     <img class="img-fluid" src="{{asset ('')}}assets/images/banner/banner-style-4-img-2.jpg" alt="">
                 </div>
@@ -1917,8 +1828,7 @@
             </div>
             <!-- End Banner Single Item -->
             <!-- Start Banner Single Item -->
-            <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive"
-                data-aos="fade-up" data-aos-delay="400">
+            <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive" data-aos="fade-up" data-aos-delay="400">
                 <div class="image">
                     <img class="img-fluid" src="{{asset ('')}}assets/images/banner/banner-style-4-img-3.jpg" alt="">
                 </div>
@@ -1932,8 +1842,7 @@
             </div>
             <!-- End Banner Single Item -->
             <!-- Start Banner Single Item -->
-            <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive"
-                data-aos="fade-up" data-aos-delay="600">
+            <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive" data-aos="fade-up" data-aos-delay="600">
                 <div class="image">
                     <img class="img-fluid" src="{{asset ('')}}assets/images/banner/banner-style-4-img-4.jpg" alt="">
                 </div>
@@ -1981,8 +1890,7 @@
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-1.jpg" alt="">
+                                                <img class="img-fluid" src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-1.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1991,9 +1899,7 @@
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
-                                                    class="read-more-btn icon-space-left">Read More <span><i
-                                                            class="ion-ios-arrow-thin-right"></i></span></a>
+                                                <a href="blog-single-sidebar-left.html" class="read-more-btn icon-space-left">Read More <span><i class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
                                                     <a href="#" class="date">24 Apr</a>
                                                 </div>
@@ -2005,8 +1911,7 @@
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-2.jpg" alt="">
+                                                <img class="img-fluid" src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -2015,8 +1920,7 @@
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="#" class="read-more-btn icon-space-left">Read More <span><i
-                                                            class="ion-ios-arrow-thin-right"></i></span></a>
+                                                <a href="#" class="read-more-btn icon-space-left">Read More <span><i class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
                                                     <a href="blog-single-sidebar-left.html" class="date">24 Apr</a>
                                                 </div>
@@ -2028,8 +1932,7 @@
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-3.jpg" alt="">
+                                                <img class="img-fluid" src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-3.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -2038,9 +1941,7 @@
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
-                                                    class="read-more-btn icon-space-left">Read More <span><i
-                                                            class="ion-ios-arrow-thin-right"></i></span></a>
+                                                <a href="blog-single-sidebar-left.html" class="read-more-btn icon-space-left">Read More <span><i class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
                                                     <a href="#" class="date">24 Apr</a>
                                                 </div>
@@ -2052,8 +1953,7 @@
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-4.jpg" alt="">
+                                                <img class="img-fluid" src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-4.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -2062,9 +1962,7 @@
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
-                                                    class="read-more-btn icon-space-left">Read More <span><i
-                                                            class="ion-ios-arrow-thin-right"></i></span></a>
+                                                <a href="blog-single-sidebar-left.html" class="read-more-btn icon-space-left">Read More <span><i class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
                                                     <a href="#" class="date">24 Apr</a>
                                                 </div>
@@ -2076,8 +1974,7 @@
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-5.jpg" alt="">
+                                                <img class="img-fluid" src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-5.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -2086,9 +1983,7 @@
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
-                                                    class="read-more-btn icon-space-left">Read More <span><i
-                                                            class="ion-ios-arrow-thin-right"></i></span></a>
+                                                <a href="blog-single-sidebar-left.html" class="read-more-btn icon-space-left">Read More <span><i class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
                                                     <a href="#" class="date">24 Apr</a>
                                                 </div>
@@ -2100,8 +1995,7 @@
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-6.jpg" alt="">
+                                                <img class="img-fluid" src="{{asset ('')}}assets/images/blog/blog-grid-home-1-img-6.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -2110,9 +2004,7 @@
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
-                                                    class="read-more-btn icon-space-left">Read More <span><i
-                                                            class="ion-ios-arrow-thin-right"></i></span></a>
+                                                <a href="blog-single-sidebar-left.html" class="read-more-btn icon-space-left">Read More <span><i class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
                                                     <a href="#" class="date">24 Apr</a>
                                                 </div>
@@ -2141,28 +2033,15 @@
                     <div class="col-12">
                         <div class="instagram-box">
                             <div id="instagramFeed" class="instagram-grid clearfix">
-                                <a href="https://www.instagram.com/p/CCFOZKDDS6S/" target="_blank"
-                                    class="instagram-image-link float-left banner-animation"><img
-                                        src="{{asset ('halma-fe/assets/images/instagram/instagram-1.jpg')}}" alt=""></a>
-                                <a href="https://www.instagram.com/p/CCFOYDNjWF5/" target="_blank"
-                                    class="instagram-image-link float-left banner-animation"><img
-                                        src="{{asset ('halma-fe/assets/images/instagram/instagram-2.jpg')}}" alt=""></a>
-                                <a href="https://www.instagram.com/p/CCFOXH6D-zQ/" target="_blank"
-                                    class="instagram-image-link float-left banner-animation"><img
-                                        src="{{asset ('halma-fe/assets/images/instagram/instagram-3.jpg')}}" alt=""></a>
-                                <a href="https://www.instagram.com/p/CCFOVcrDDOo/" target="_blank"
-                                    class="instagram-image-link float-left banner-animation"><img
-                                        src="{{asset ('halma-fe/assets/images/instagram/instagram-4.jpg')}}" alt=""></a>
-                                <a href="https://www.instagram.com/p/CCFOUajjABP/" target="_blank"
-                                    class="instagram-image-link float-left banner-animation"><img
-                                        src="{{asset ('halma-fe/assets/images/instagram/instagram-5.jpg')}}" alt=""></a>
-                                <a href="https://www.instagram.com/p/CCFOS2MDmjj/" target="_blank"
-                                    class="instagram-image-link float-left banner-animation"><img
-                                        src="{{asset ('halma-fe/assets/images/instagram/instagram-6.jpg')}}" alt=""></a>
+                                <a href="https://www.instagram.com/p/CCFOZKDDS6S/" target="_blank" class="instagram-image-link float-left banner-animation"><img src="{{asset ('halma-fe/assets/images/instagram/instagram-1.jpg')}}" alt=""></a>
+                                <a href="https://www.instagram.com/p/CCFOYDNjWF5/" target="_blank" class="instagram-image-link float-left banner-animation"><img src="{{asset ('halma-fe/assets/images/instagram/instagram-2.jpg')}}" alt=""></a>
+                                <a href="https://www.instagram.com/p/CCFOXH6D-zQ/" target="_blank" class="instagram-image-link float-left banner-animation"><img src="{{asset ('halma-fe/assets/images/instagram/instagram-3.jpg')}}" alt=""></a>
+                                <a href="https://www.instagram.com/p/CCFOVcrDDOo/" target="_blank" class="instagram-image-link float-left banner-animation"><img src="{{asset ('halma-fe/assets/images/instagram/instagram-4.jpg')}}" alt=""></a>
+                                <a href="https://www.instagram.com/p/CCFOUajjABP/" target="_blank" class="instagram-image-link float-left banner-animation"><img src="{{asset ('halma-fe/assets/images/instagram/instagram-5.jpg')}}" alt=""></a>
+                                <a href="https://www.instagram.com/p/CCFOS2MDmjj/" target="_blank" class="instagram-image-link float-left banner-animation"><img src="{{asset ('halma-fe/assets/images/instagram/instagram-6.jpg')}}" alt=""></a>
                             </div>
                             <div class="instagram-link">
-                                <h5><a href="https://www.instagram.com/myfurniturecom/" target="_blank"
-                                        rel="noopener noreferrer">Halma Grafika</a></h5>
+                                <h5><a href="https://www.instagram.com/myfurniturecom/" target="_blank" rel="noopener noreferrer">Halma Grafika</a></h5>
                             </div>
                         </div>
                     </div>
@@ -2181,8 +2060,7 @@
                     <div class="row mb-n6">
                         <div class="col-lg-3 col-sm-6 mb-6">
                             <!-- Start Footer Single Item -->
-                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
-                                data-aos-delay="0">
+                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up" data-aos-delay="0">
                                 <h5 class="title">INFORMATION</h5>
                                 <ul class="footer-nav">
                                     <li><a href="#">Delivery Information</a></li>
@@ -2195,8 +2073,7 @@
                         </div>
                         <div class="col-lg-3 col-sm-6 mb-6">
                             <!-- Start Footer Single Item -->
-                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
-                                data-aos-delay="200">
+                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up" data-aos-delay="200">
                                 <h5 class="title">MY ACCOUNT</h5>
                                 <ul class="footer-nav">
                                     <li><a href="my-account.html">My account</a></li>
@@ -2210,8 +2087,7 @@
                         </div>
                         <div class="col-lg-3 col-sm-6 mb-6">
                             <!-- Start Footer Single Item -->
-                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
-                                data-aos-delay="400">
+                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up" data-aos-delay="400">
                                 <h5 class="title">CATEGORIES</h5>
                                 <ul class="footer-nav">
                                     <li><a href="#">Decorative</a></li>
@@ -2225,8 +2101,7 @@
                         </div>
                         <div class="col-lg-3 col-sm-6 mb-6">
                             <!-- Start Footer Single Item -->
-                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
-                                data-aos-delay="600">
+                            <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up" data-aos-delay="600">
                                 <h5 class="title">ABOUT US</h5>
                                 <div class="footer-about">
                                     <p>We are a team of designers and developers that create high quality Magento,
@@ -2281,12 +2156,10 @@
             <!-- Start Footer Bottom -->
             <div class="footer-bottom">
                 <div class="container">
-                    <div
-                        class="row justify-content-between align-items-center align-items-center flex-column flex-md-row mb-n6">
+                    <div class="row justify-content-between align-items-center align-items-center flex-column flex-md-row mb-n6">
                         <div class="col-auto mb-6">
                             <div class="footer-copyright">
-                                <p class="copyright-text">&copy; 2023 <a href="index.html">Halma Delapan Indonesia</a>. <a href="#"
-                                        target="_blank"></a> </p>
+                                <p class="copyright-text">&copy; 2023 <a href="index.html">Halma Delapan Indonesia</a>. <a href="#" target="_blank"></a> </p>
 
                             </div>
                         </div>
@@ -2316,8 +2189,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col text-right">
-                                <button type="button" class="close modal-close" data-bs-dismiss="modal"
-                                    aria-label="Close">
+                                <button type="button" class="close modal-close" data-bs-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true"> <i class="fa fa-times"></i></span>
                                 </button>
                             </div>
@@ -2327,8 +2199,7 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="modal-add-cart-product-img">
-                                            <img class="img-fluid"
-                                                src="{{asset ('halma-fe/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
+                                            <img class="img-fluid" src="{{asset ('halma-fe/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -2365,8 +2236,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col text-right">
-                                <button type="button" class="close modal-close" data-bs-dismiss="modal"
-                                    aria-label="Close">
+                                <button type="button" class="close modal-close" data-bs-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true"> <i class="fa fa-times"></i></span>
                                 </button>
                             </div>
@@ -2399,32 +2269,25 @@
                                     </div>
                                     <!-- End Large Image -->
                                     <!-- Start Thumbnail Image -->
-                                    <div
-                                        class="product-image-thumb modal-product-image-thumb swiper-container pos-relative mt-5">
+                                    <div class="product-image-thumb modal-product-image-thumb swiper-container pos-relative mt-5">
                                         <div class="swiper-wrapper">
                                             <div class="product-image-thumb-single swiper-slide">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('halma-fe/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
+                                                <img class="img-fluid" src="{{asset ('halma-fe/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
                                             </div>
                                             <div class="product-image-thumb-single swiper-slide">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('halma-fe/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
+                                                <img class="img-fluid" src="{{asset ('halma-fe/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
                                             </div>
                                             <div class="product-image-thumb-single swiper-slide">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('halma-fe/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
+                                                <img class="img-fluid" src="{{asset ('halma-fe/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
                                             </div>
                                             <div class="product-image-thumb-single swiper-slide">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('halma-fe/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
+                                                <img class="img-fluid" src="{{asset ('halma-fe/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
                                             </div>
                                             <div class="product-image-thumb-single swiper-slide">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('halma-fe/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
+                                                <img class="img-fluid" src="{{asset ('halma-fe/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                             </div>
                                             <div class="product-image-thumb-single swiper-slide">
-                                                <img class="img-fluid"
-                                                    src="{{asset ('halma-fe/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
+                                                <img class="img-fluid" src="{{asset ('halma-fe/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                             </div>
                                         </div>
                                         <!-- Add Arrows -->
@@ -2448,35 +2311,27 @@
                                             <span>Color</span>
                                             <div class="product-variable-color">
                                                 <label for="modal-product-color-red">
-                                                    <input name="modal-product-color" id="modal-product-color-red"
-                                                        class="color-select" type="radio" checked>
+                                                    <input name="modal-product-color" id="modal-product-color-red" class="color-select" type="radio" checked>
                                                     <span class="product-color-red"></span>
                                                 </label>
                                                 <label for="modal-product-color-tomato">
-                                                    <input name="modal-product-color" id="modal-product-color-tomato"
-                                                        class="color-select" type="radio">
+                                                    <input name="modal-product-color" id="modal-product-color-tomato" class="color-select" type="radio">
                                                     <span class="product-color-tomato"></span>
                                                 </label>
                                                 <label for="modal-product-color-green">
-                                                    <input name="modal-product-color" id="modal-product-color-green"
-                                                        class="color-select" type="radio">
+                                                    <input name="modal-product-color" id="modal-product-color-green" class="color-select" type="radio">
                                                     <span class="product-color-green"></span>
                                                 </label>
                                                 <label for="modal-product-color-light-green">
-                                                    <input name="modal-product-color"
-                                                        id="modal-product-color-light-green" class="color-select"
-                                                        type="radio">
+                                                    <input name="modal-product-color" id="modal-product-color-light-green" class="color-select" type="radio">
                                                     <span class="product-color-light-green"></span>
                                                 </label>
                                                 <label for="modal-product-color-blue">
-                                                    <input name="modal-product-color" id="modal-product-color-blue"
-                                                        class="color-select" type="radio">
+                                                    <input name="modal-product-color" id="modal-product-color-blue" class="color-select" type="radio">
                                                     <span class="product-color-blue"></span>
                                                 </label>
                                                 <label for="modal-product-color-light-blue">
-                                                    <input name="modal-product-color"
-                                                        id="modal-product-color-light-blue" class="color-select"
-                                                        type="radio">
+                                                    <input name="modal-product-color" id="modal-product-color-light-blue" class="color-select" type="radio">
                                                     <span class="product-color-light-blue"></span>
                                                 </label>
                                             </div>
@@ -2523,6 +2378,37 @@
             </div>
         </div>
     </div> <!-- End Modal Quickview cart -->
+
+    <script>
+        // Check browser support
+        if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+            // Create SpeechRecognition instance
+            var recognition = new(window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = 'id-ID'; 
+
+            recognition.onstart = function() {
+                console.log('Speech recognition started');
+            };
+
+            recognition.onresult = function(event) {
+                var transcript = event.results[0][0].transcript;
+                console.log('Recognized speech:', transcript);
+                document.getElementById("hasil_voice").value = transcript;
+            };
+
+            recognition.onerror = function(event) {
+                console.error('Speech recognition error:', event.error);
+            };
+
+            recognition.onend = function() {
+                console.log('Speech recognition ended');
+            };
+
+            recognition.start();
+        }
+
+        
+    </script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
     <script src="{{asset ('halma-fe/assets/js/vendor/vendor.min.js')}}"></script>
