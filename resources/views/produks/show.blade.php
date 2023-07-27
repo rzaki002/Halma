@@ -1,4 +1,4 @@
-@extends('produks.layout')
+@extends('auth.admin.app')
 
 @section('content')
     <div class="row">

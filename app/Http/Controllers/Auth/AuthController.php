@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Produk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
@@ -49,12 +50,10 @@ class AuthController extends Controller
         );
         if (Auth::attempt($credentials)) {
             return redirect()->intended('dashboard')
-                ->withSuccess('You have 
-Successfully loggedin');
+                ->withSuccess('You have Successfully loggedin');
         }
 
-        return redirect("login")->withSuccess('Oppes! 
-You have entered invalid credentials');
+        return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
     }
 
     /**
@@ -72,6 +71,7 @@ You have entered invalid credentials');
 
         $data = $request->all();
         $check = $this->create($data);
+        $check->assignRole('User');
 
         return redirect("dashboard")->withSuccess('Great! You have Successfully loggedin');
     }
@@ -83,12 +83,14 @@ You have entered invalid credentials');
      */
     public function dashboard()
     {
-        if (Auth::check()) {
+        if (Auth::check() && Auth::user()->hasRole("Admin")) {
             return view('auth.dashboard');
+        }else if(Auth::check() && Auth::user()->hasRole("User")){
+            $produks = Produk::all();
+            return view("auth.customer_page.index",compact('produks'));
         }
 
-        return redirect("login")->withSuccess('Opps! 
-You do not have access');
+        return redirect("login")->withSuccess('Opps! You do not have access');
     }
 
     /**

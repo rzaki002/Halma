@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class CustomerController extends Controller
 {
@@ -13,10 +15,10 @@ class CustomerController extends Controller
      */
     function __construct()
     {
-        $this->middleware('permission:customer-list|customer-create|customer-edit|customer-delete',
+        $this->middleware('permission:customer-list|customer-edit|customer-delete',
             ['only' => ['index', 'show']]
         );
-        $this->middleware('permission: customer-create', ['only' => ['create', 'store']]);
+        // $this->middleware('permission: customer-create', ['only' => ['create', 'store']]);
         $this->middleware('permission: customer-edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission: customer-delete', ['only' => ['destroy']]);
     }
@@ -48,20 +50,29 @@ class CustomerController extends Controller
             'password' => 'required',
         ]);
 
-        Customer::create($request->all());
+        Customer::create([
+            "no_hp" => $request->no_hp,
+            "nama" => $request->nama,
+            "email" => $request->email,
+            "password" => $request->password
+        ]);
 
         $data = [
             'name'=> $request->nama,
             'password'=>bcrypt($request->password)
         ];
-        User::create($data);
+        $user = User::create($data);
+        $role = Role::where('name','User')->first();
+        if($role ==  null){
+            $role = Role::create(['name'=>'User']);
+            $user->assignRole([$role->id]);
+        }else{
+            $user->assignRole([$role->id]);
+        }
         return redirect()->route('customers.index')
             ->with('success', 'Customers created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Customer $customer)
     {
         return view('customers.show', compact('customer'));

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kategori_produk;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Models\Produk;
+use Illuminate\Support\Facades\Auth;
 
 class ProdukController extends Controller
 {
@@ -71,7 +73,9 @@ class ProdukController extends Controller
      */
     public function show(Produk $produk)
     {
-        return view('produks.show', compact('produk'));
+        $produks = Produk::all();
+        $formattedAmount = number_format($produk->harga, 0, ',', '.');
+        return view('produks.show', compact('produk', 'formattedAmount'));
     }
 
     /**
@@ -93,7 +97,7 @@ class ProdukController extends Controller
             'harga' => 'required',
             'keterangan' => 'required',
             'id_satuan' => 'required',
-            'gambar' => 'required|file|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'gambar' => 'required|file|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         $input = $request->all();
@@ -121,5 +125,17 @@ class ProdukController extends Controller
         $produk->delete();
         return redirect()->route('produks.index')
             ->with('success', 'Produk deleted susccesfully');
+    }
+
+    public function detail_produk(Produk $produk){
+        $produks = Produk::where('id',$produk);
+        if (!$produks){
+            abort(404);
+        }
+        return view("auth.customer_page.index",compact('produks'));
+    }
+    public function keranjang(){
+        $produkUser = Order::where('id_customer',Auth::user()->id)->get();
+        return view('produks.keranjang',compact('produkUser'));
     }
 }

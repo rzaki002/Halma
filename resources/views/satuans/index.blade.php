@@ -7,7 +7,10 @@
                 <h2>Satuan</h2>
             </div>
             <div class="pull-right">
+                @can('satuan-create')
                 <a class="btn btn-success" href="{{ route('satuans.create') }}"> Create New Satuan Produk</a>
+                @endcan
+                
             </div>
         </div>
     </div>

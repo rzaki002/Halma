@@ -1,12 +1,12 @@
-@extends('produks.layout')
+@extends('auth.admin.app')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+            <div class="pull-left pt-5">
                 <h2>Produk</h2>
             </div>
-            <div class="pull-right">
+            <div class="pull-right mb-2">
                 @can('produk-create')
                     <a class="btn btn-success" href="{{ route('produks.create') }}"> Create New Product</a>
                 @endcan
@@ -36,9 +36,9 @@
             <tr>
                 <td>{{ ++$i }}</td>
                 <td>{{ $produk->nama }}</td>
-                <td>{{ $produk->kategori->nama}}</td>
+                <td>{{ $produk->kategori}}</td>
                 <td>{{ $produk->harga }}</td>
-                <td>{{ $produk->satuan->nama }}</td>
+                <td>{{ $produk->satuan}}</td>
                 <td>{{ $produk->keterangan }}</td>
                 <td><img src="/gambar/{{ $produk->gambar }}" width="100px" /></td>
                 <td>

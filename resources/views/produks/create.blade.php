@@ -1,12 +1,12 @@
-@extends('produks.layout')
+@extends('auth.admin.app')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+            <div class="pull-left pt-5">
                 <h2>Add New Product</h2>
             </div>
-            <div class="pull-right">
+            <div class="pull-right mb-2">
                 <a class="btn btn-primary" href="{{ route('produks.index') }}"> Back</a>
             </div>
         </div>

@@ -1,13 +1,12 @@
-@extends('auth.layout')
-
+@extends('auth.admin.app')
 
 @section('content')
 <div class="row">
-    <div class="col-lg-12 margin-tb">
+    <div class="col-lg-12 margin-tb pt-5">
         <div class="pull-left">
             <h2> Show User</h2>
         </div>
-        <div class="pull-right">
+        <div class="pull-right mb-2">
             <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
         </div>
     </div>

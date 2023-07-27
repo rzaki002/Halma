@@ -16,9 +16,9 @@ class Kategori_produkController extends Controller
             'permission:kategori_produk-list|kategori_produk-create|kategori_produk-edit|kategori_produk-delete',
             ['only' => ['index', 'show']]
         );
-        $this->middleware('permission: kategori_produk-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission: kategori_produk-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission: kategori_produk-delete', ['only' => ['destroy']]);
+        $this->middleware('permission:kategori_produk-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:kategori_produk-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:kategori_produk-delete', ['only' => ['destroy']]);
     }
     public function index()
     {

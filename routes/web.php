@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\Kategori_produkController;
 use App\Http\Controllers\Order_detailController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SatuanController;
@@ -23,21 +24,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-//user(admin)
+
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 Route::get('registration', [AuthController::class, 'registration'])->name('register');
 Route::put('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
-Route::get('dashboard', [AuthController::class, 'dashboard']);
+Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-//end
-
-//customer
-//end
 Route::resource('produks', ProdukController::class);
+Route::get('keranjang',[ ProdukController::class,'keranjang']);
 Route::resource('satuans', SatuanController::class);
 Route::resource('kategori_produks', Kategori_produkController::class);
 Route::resource('customers', CustomerController::class);
@@ -45,3 +46,5 @@ Route::resource('orders', OrderController::class);
 Route::resource('order_details', Order_detailController::class);
 Route::resource('users', UserController::class);
 Route::resource('roles', RoleController::class);
+Route::get('customer_page/index', [ProdukController::class,'detail_produk'])->name('customer_page.detail_produk');
+Route::resource('pembayarans', PembayaranController::class);

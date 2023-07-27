@@ -1,13 +1,15 @@
-@extends('kategori_produks.layout')
-
+@extends('auth.admin.app')
 @section('content')
+
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="col-lg-12 margin-tb pt-5">
             <div class="pull-left">
                 <h2>Kategori Produk</h2>
             </div>
-            <div class="pull-right">
+            <div class="pull-right mb-2">
+                @can('kategori_produk-create')
                 <a class="btn btn-success" href="{{ route('kategori_produks.create') }}"> Create New Kategori Produk</a>
+                @endcan
             </div>
         </div>
     </div>
@@ -17,8 +19,9 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-
-    <table class="table table-bordered">
+    <div class="card">
+        <div class="table-responsive">
+    <table  class="table table-striped" >
         <tr>
             <th>No</th>
             <th>Nama</th>
@@ -47,6 +50,10 @@
             </tr>
         @endforeach
     </table>
+</div>
+    </div>
+
 
     {!! $kategori_produks->links() !!}
+
 @endsection

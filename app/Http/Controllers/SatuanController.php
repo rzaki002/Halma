@@ -15,9 +15,9 @@ class SatuanController extends Controller
         $this->middleware('permission:satuan-list|satuan-create|satuan-edit|satuan-delete',
             ['only' => ['index', 'show']]
         );
-        $this->middleware('permission: satuan-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission: satuan-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission: satuan-delete', ['only' => ['destroy']]);
+        $this->middleware('permission:satuan-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:satuan-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:satuan-delete', ['only' => ['destroy']]);
     }
     public function index()
     {
