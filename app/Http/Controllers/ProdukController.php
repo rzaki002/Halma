@@ -132,7 +132,7 @@ class ProdukController extends Controller
         if (!$produks){
             abort(404);
         }
-        return view("auth.customer_page.index",compact('produks'));
+        return view("home.index",compact('produks'));
     }
     public function keranjang(){
         $produkUser = Order::where('id_customer',Auth::user()->id)->get();
