@@ -91,4 +91,20 @@ class PembayaranController extends Controller
         return redirect()->route('pembayarans.index')
             ->with('success', 'Pembayaran deleted susccesfully');
     }
+
+    public function pembayaran(Request $request){
+        $input = $request->all();
+
+        Pembayaran::create([
+            'id_order'=>$input['order_id'],
+            'jumlah_bayar'=>$input['gross_amount'],
+            'bukti_tf'=>$input['pdf_url'],
+            'metode_bayar'=>$input['payment_type']
+        ]);
+
+        return response()->json([
+            'status'=>"success",
+            'data'=> $input
+        ]);
+    }
 }

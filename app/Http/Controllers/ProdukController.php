@@ -14,16 +14,16 @@ class ProdukController extends Controller
     /**
      * Display a listing of the resource.
      */
-    function __construct()
-    {
-        $this->middleware(
-            'permission:produk-list|produk-create|produk-edit|produk-delete',
-            ['only' => ['index', 'show']]
-        );
-        $this->middleware('permission:produk-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:produk-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:produk-delete', ['only' => ['destroy']]);
-    }
+    // function __construct()
+    // {
+    //     $this->middleware(
+    //         'permission:produk-list|produk-create|produk-edit|produk-delete',
+    //         ['only' => ['index', 'show']]
+    //     );
+    //     $this->middleware('permission:produk-create', ['only' => ['create', 'store']]);
+    //     $this->middleware('permission:produk-edit', ['only' => ['edit', 'update']]);
+    //     $this->middleware('permission:produk-delete', ['only' => ['destroy']]);
+    // }
     public function index()
     {
         $produks = Produk::latest()->paginate(5);
@@ -77,7 +77,7 @@ class ProdukController extends Controller
     {
         $produks = Produk::all();
         $formattedAmount = number_format($produk->harga, 0, ',', '.');
-        return view('produks.show', compact('produk', 'formattedAmount'));
+        return view('home.index', compact('produks', 'formattedAmount'));
     }
 
     /**
@@ -160,7 +160,7 @@ class ProdukController extends Controller
     public function keranjang(){
         $produkUser = Order::where('id_customer',Auth::user()->id)->get();
         return view('produks.keranjang',compact('produkUser'));
-        return view("auth.customer_page.index", compact('produks'));
+        // return view("auth.customer_page.index", compact('produks'));
     }
 
 }

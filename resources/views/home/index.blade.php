@@ -11,9 +11,8 @@
                     <!-- Start Sort tab Button -->
                     <div class="sort-tablist d-flex align-items-center">
                         <ul class="tablist nav sort-tab-btn">
-                            <li><a class="nav-link active" data-bs-toggle="tab"
-                                    href="#layout-3-grid"><img src="{{asset('halma-fe/assets/images/icons/bkg_grid.png')}}"
-                                        alt=""></a></li>
+                            <li><a class="nav-link active" data-bs-toggle="tab" href="#layout-3-grid"><img
+                                        src="{{asset('halma-fe/assets/images/icons/bkg_grid.png')}}" alt=""></a></li>
                             <li><a class="nav-link" data-bs-toggle="tab" href="#layout-list"><img
                                         src="{{asset('halma-fe/assets/images/icons/bkg_list.png')}}" alt=""></a></li>
                         </ul>
@@ -58,11 +57,11 @@
                         <div class="tab-pane active show sort-layout-single" id="layout-3-grid">
                             <div class="row">
                                 {{-- foreacg --}}
-                                {{-- @foreach ($produks as $produk)
+                                @foreach ($produks as $produk)
                                 <div class="col-xl-4 col-sm-6 col-12">
                                     <!-- Start Product Default Single Item -->
-                                    <div class="product-default-single-item product-color--golden"
-                                        data-aos="fade-up" data-aos-delay="0">
+                                    <div class="product-default-single-item product-color--golden" data-aos="fade-up"
+                                        data-aos-delay="0">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
                                                 <img src="/gambar/{{$produk->gambar}}" width="600px" height="690px"
@@ -70,14 +69,21 @@
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                     <a href="#" data-bs-toggle="modal"
+                                                    <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalAddcart">Add To Card</a>
                                                 </div>
+                                                @if (Auth::check())
                                                 <div class="action-link-right">
                                                     <a onclick="getData()" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                </div> 
+                                                </div>
+                                                @else
+                                                <div class="action-link-right">
+                                                    <a href="{{route('login')}}"><i
+                                                            class="icon-magnifier"></i></a>
+                                                </div>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="content">
@@ -98,272 +104,243 @@
                                                 </ul>
                                             </div>
                                             <div class="content-right">
-                                                <span class="price">Rp {{number_format($produk->harga, 0, ',', '.')}}</span>
+                                                <span class="price">Rp
+                                                    {{number_format($produk->harga, 0, ',', '.')}}</span>
                                             </div>
 
                                         </div>
                                     </div>
                                     <!-- End Product Default Single Item -->
                                 </div>
-                                @endforeach --}}
+                                @endforeach
                                 {{-- endofrnya di sini --}}
-                        </div> <!-- End Grid View Product -->
-                        <!-- Start List View Product -->
-                        <div class="tab-pane sort-layout-single" id="layout-list">
-                            <div class="row">
-                                <div class="col-12">
-                                    <!-- Start Product Defautlt Single -->
-                                    <div class="product-list-single product-color--golden">
-                                        <a href="product-details-default.html"
-                                            class="product-list-img-link">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-1.jpg"
-                                                alt="">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-2.jpg"
-                                                alt="">
-                                        </a>
-                                        <div class="product-list-content">
-                                            <h5 class="product-list-link"><a
-                                                    href="product-details-default.html">KAOREET LOBORTIS
-                                                    SAGIT</a></h5>
-                                            <ul class="review-star">
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="empty"><i class="ion-android-star"></i></li>
-                                            </ul>
-                                            <span class="product-list-price"><del>$30.12</del>
-                                                $25.12</span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Nobis ad, iure incidunt. Ab consequatur temporibus non
-                                                eveniet inventore doloremque necessitatibus sed, ducimus
-                                                quisquam, ad asperiores</p>
-                                            <div class="product-action-icon-link-list">
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalAddcart"
-                                                    class="btn btn-lg btn-black-default-hover">Add to
-                                                    cart</a>
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalQuickview"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-magnifier"></i></a>
-                                                <a href="wishlist.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-heart"></i></a>
-                                                <a href="compare.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-shuffle"></i></a>
+                            </div> <!-- End Grid View Product -->
+                            <!-- Start List View Product -->
+                            <div class="tab-pane sort-layout-single" id="layout-list">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- Start Product Defautlt Single -->
+                                        <div class="product-list-single product-color--golden">
+                                            <a href="product-details-default.html" class="product-list-img-link">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-1.jpg" alt="">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-2.jpg" alt="">
+                                            </a>
+                                            <div class="product-list-content">
+                                                <h5 class="product-list-link"><a
+                                                        href="product-details-default.html">KAOREET LOBORTIS
+                                                        SAGIT</a></h5>
+                                                <ul class="review-star">
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="empty"><i class="ion-android-star"></i></li>
+                                                </ul>
+                                                <span class="product-list-price"><del>$30.12</del>
+                                                    $25.12</span>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Nobis ad, iure incidunt. Ab consequatur temporibus non
+                                                    eveniet inventore doloremque necessitatibus sed, ducimus
+                                                    quisquam, ad asperiores</p>
+                                                <div class="product-action-icon-link-list">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart"
+                                                        class="btn btn-lg btn-black-default-hover">Add to
+                                                        cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-magnifier"></i></a>
+                                                    <a href="wishlist.html"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-heart"></i></a>
+                                                    <a href="compare.html" class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-shuffle"></i></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div> <!-- End Product Defautlt Single -->
-                                </div>
-                                <div class="col-12">
-                                    <!-- Start Product Defautlt Single -->
-                                    <div class="product-list-single product-color--golden">
-                                        <a href="product-details-default.html"
-                                            class="product-list-img-link">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-3.jpg"
-                                                alt="">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-4.jpg"
-                                                alt="">
-                                        </a>
-                                        <div class="product-list-content">
-                                            <h5 class="product-list-link"><a
-                                                    href="product-details-default.html">CONDIMENTUM
-                                                    POSUERE</a></h5>
-                                            <ul class="review-star">
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="empty"><i class="ion-android-star"></i></li>
-                                            </ul>
-                                            <span class="product-list-price">$95.00</span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Nobis ad, iure incidunt. Ab consequatur temporibus non
-                                                eveniet inventore doloremque necessitatibus sed, ducimus
-                                                quisquam, ad asperiores</p>
-                                            <div class="product-action-icon-link-list">
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalAddcart"
-                                                    class="btn btn-lg btn-black-default-hover">Add to
-                                                    cart</a>
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalQuickview"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-magnifier"></i></a>
-                                                <a href="wishlist.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-heart"></i></a>
-                                                <a href="compare.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-shuffle"></i></a>
+                                        </div> <!-- End Product Defautlt Single -->
+                                    </div>
+                                    <div class="col-12">
+                                        <!-- Start Product Defautlt Single -->
+                                        <div class="product-list-single product-color--golden">
+                                            <a href="product-details-default.html" class="product-list-img-link">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-3.jpg" alt="">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-4.jpg" alt="">
+                                            </a>
+                                            <div class="product-list-content">
+                                                <h5 class="product-list-link"><a
+                                                        href="product-details-default.html">CONDIMENTUM
+                                                        POSUERE</a></h5>
+                                                <ul class="review-star">
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="empty"><i class="ion-android-star"></i></li>
+                                                </ul>
+                                                <span class="product-list-price">$95.00</span>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Nobis ad, iure incidunt. Ab consequatur temporibus non
+                                                    eveniet inventore doloremque necessitatibus sed, ducimus
+                                                    quisquam, ad asperiores</p>
+                                                <div class="product-action-icon-link-list">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart"
+                                                        class="btn btn-lg btn-black-default-hover">Add to
+                                                        cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-magnifier"></i></a>
+                                                    <a href="wishlist.html"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-heart"></i></a>
+                                                    <a href="compare.html" class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-shuffle"></i></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div> <!-- End Product Defautlt Single -->
-                                </div>
-                                <div class="col-12">
-                                    <!-- Start Product Defautlt Single -->
-                                    <div class="product-list-single product-color--golden">
-                                        <a href="product-details-default.html"
-                                            class="product-list-img-link">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-5.jpg"
-                                                alt="">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-6.jpg"
-                                                alt="">
-                                        </a>
-                                        <div class="product-list-content">
-                                            <h5 class="product-list-link"><a
-                                                    href="product-details-default.html">ALIQUAM
-                                                    LOBORTIS</a></h5>
-                                            <ul class="review-star">
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="empty"><i class="ion-android-star"></i></li>
-                                            </ul>
-                                            <span class="product-list-price"> $25.12</span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Nobis ad, iure incidunt. Ab consequatur temporibus non
-                                                eveniet inventore doloremque necessitatibus sed, ducimus
-                                                quisquam, ad asperiores</p>
-                                            <div class="product-action-icon-link-list">
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalAddcart"
-                                                    class="btn btn-lg btn-black-default-hover">Add to
-                                                    cart</a>
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalQuickview"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-magnifier"></i></a>
-                                                <a href="wishlist.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-heart"></i></a>
-                                                <a href="compare.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-shuffle"></i></a>
+                                        </div> <!-- End Product Defautlt Single -->
+                                    </div>
+                                    <div class="col-12">
+                                        <!-- Start Product Defautlt Single -->
+                                        <div class="product-list-single product-color--golden">
+                                            <a href="product-details-default.html" class="product-list-img-link">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-5.jpg" alt="">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-6.jpg" alt="">
+                                            </a>
+                                            <div class="product-list-content">
+                                                <h5 class="product-list-link"><a
+                                                        href="product-details-default.html">ALIQUAM
+                                                        LOBORTIS</a></h5>
+                                                <ul class="review-star">
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="empty"><i class="ion-android-star"></i></li>
+                                                </ul>
+                                                <span class="product-list-price"> $25.12</span>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Nobis ad, iure incidunt. Ab consequatur temporibus non
+                                                    eveniet inventore doloremque necessitatibus sed, ducimus
+                                                    quisquam, ad asperiores</p>
+                                                <div class="product-action-icon-link-list">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart"
+                                                        class="btn btn-lg btn-black-default-hover">Add to
+                                                        cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-magnifier"></i></a>
+                                                    <a href="wishlist.html"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-heart"></i></a>
+                                                    <a href="compare.html" class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-shuffle"></i></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div> <!-- End Product Defautlt Single -->
-                                </div>
-                                <div class="col-12">
-                                    <!-- Start Product Defautlt Single -->
-                                    <div class="product-list-single product-color--golden">
-                                        <a href="product-details-default.html"
-                                            class="product-list-img-link">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-7.jpg"
-                                                alt="">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-8.jpg"
-                                                alt="">
-                                        </a>
-                                        <div class="product-list-content">
-                                            <h5 class="product-list-link"><a
-                                                    href="product-details-default.html">CONVALLIS QUAM
-                                                    SIT</a></h5>
-                                            <ul class="review-star">
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="empty"><i class="ion-android-star"></i></li>
-                                            </ul>
-                                            <span class="product-list-price">$75.00 - $85.00</span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Nobis ad, iure incidunt. Ab consequatur temporibus non
-                                                eveniet inventore doloremque necessitatibus sed, ducimus
-                                                quisquam, ad asperiores</p>
-                                            <div class="product-action-icon-link-list">
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalAddcart"
-                                                    class="btn btn-lg btn-black-default-hover">Add to
-                                                    cart</a>
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalQuickview"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-magnifier"></i></a>
-                                                <a href="wishlist.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-heart"></i></a>
-                                                <a href="compare.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-shuffle"></i></a>
+                                        </div> <!-- End Product Defautlt Single -->
+                                    </div>
+                                    <div class="col-12">
+                                        <!-- Start Product Defautlt Single -->
+                                        <div class="product-list-single product-color--golden">
+                                            <a href="product-details-default.html" class="product-list-img-link">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-7.jpg" alt="">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-8.jpg" alt="">
+                                            </a>
+                                            <div class="product-list-content">
+                                                <h5 class="product-list-link"><a
+                                                        href="product-details-default.html">CONVALLIS QUAM
+                                                        SIT</a></h5>
+                                                <ul class="review-star">
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="empty"><i class="ion-android-star"></i></li>
+                                                </ul>
+                                                <span class="product-list-price">$75.00 - $85.00</span>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Nobis ad, iure incidunt. Ab consequatur temporibus non
+                                                    eveniet inventore doloremque necessitatibus sed, ducimus
+                                                    quisquam, ad asperiores</p>
+                                                <div class="product-action-icon-link-list">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart"
+                                                        class="btn btn-lg btn-black-default-hover">Add to
+                                                        cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-magnifier"></i></a>
+                                                    <a href="wishlist.html"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-heart"></i></a>
+                                                    <a href="compare.html" class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-shuffle"></i></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div> <!-- End Product Defautlt Single -->
-                                </div>
-                                <div class="col-12">
-                                    <!-- Start Product Defautlt Single -->
-                                    <div class="product-list-single product-color--golden">
-                                        <a href="product-details-default.html"
-                                            class="product-list-img-link">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-9.jpg"
-                                                alt="">
-                                            <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-10.jpg"
-                                                alt="">
-                                        </a>
-                                        <div class="product-list-content">
-                                            <h5 class="product-list-link"><a
-                                                    href="product-details-default.html">DONEC EU LIBERO
-                                                    AC</a></h5>
-                                            <ul class="review-star">
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="fill"><i class="ion-android-star"></i></li>
-                                                <li class="empty"><i class="ion-android-star"></i></li>
-                                            </ul>
-                                            <span class="product-list-price"><del>$25.12</del>
-                                                $20.00</span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Nobis ad, iure incidunt. Ab consequatur temporibus non
-                                                eveniet inventore doloremque necessitatibus sed, ducimus
-                                                quisquam, ad asperiores</p>
-                                            <div class="product-action-icon-link-list">
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalAddcart"
-                                                    class="btn btn-lg btn-black-default-hover">Add to
-                                                    cart</a>
-                                                <a href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modalQuickview"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-magnifier"></i></a>
-                                                <a href="wishlist.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-heart"></i></a>
-                                                <a href="compare.html"
-                                                    class="btn btn-lg btn-black-default-hover"><i
-                                                        class="icon-shuffle"></i></a>
+                                        </div> <!-- End Product Defautlt Single -->
+                                    </div>
+                                    <div class="col-12">
+                                        <!-- Start Product Defautlt Single -->
+                                        <div class="product-list-single product-color--golden">
+                                            <a href="product-details-default.html" class="product-list-img-link">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-9.jpg" alt="">
+                                                <img class="img-fluid"
+                                                    src="assets/images/product/default/home-1/default-10.jpg" alt="">
+                                            </a>
+                                            <div class="product-list-content">
+                                                <h5 class="product-list-link"><a
+                                                        href="product-details-default.html">DONEC EU LIBERO
+                                                        AC</a></h5>
+                                                <ul class="review-star">
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="fill"><i class="ion-android-star"></i></li>
+                                                    <li class="empty"><i class="ion-android-star"></i></li>
+                                                </ul>
+                                                <span class="product-list-price"><del>$25.12</del>
+                                                    $20.00</span>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Nobis ad, iure incidunt. Ab consequatur temporibus non
+                                                    eveniet inventore doloremque necessitatibus sed, ducimus
+                                                    quisquam, ad asperiores</p>
+                                                <div class="product-action-icon-link-list">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart"
+                                                        class="btn btn-lg btn-black-default-hover">Add to
+                                                        cart</a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalQuickview"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-magnifier"></i></a>
+                                                    <a href="wishlist.html"
+                                                        class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-heart"></i></a>
+                                                    <a href="compare.html" class="btn btn-lg btn-black-default-hover"><i
+                                                            class="icon-shuffle"></i></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div> <!-- End Product Defautlt Single -->
+                                        </div> <!-- End Product Defautlt Single -->
+                                    </div>
                                 </div>
-                            </div>
-                        </div> <!-- End List View Product -->
+                            </div> <!-- End List View Product -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div> <!-- End Tab Wrapper -->
+        </div> <!-- End Tab Wrapper -->
 
-    <!-- Start Pagination -->
-    <div class="page-pagination text-center" data-aos="fade-up" data-aos-delay="0">
-        <ul>
-            <li><a class="active" href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#"><i class="ion-ios-skipforward"></i></a></li>
-        </ul>
-    </div> <!-- End Pagination -->
-</div>
-@endsection
+        <!-- Start Pagination -->
+        <div class="page-pagination text-center" data-aos="fade-up" data-aos-delay="0">
+            <ul>
+                <li><a class="active" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#"><i class="ion-ios-skipforward"></i></a></li>
+            </ul>
+        </div> <!-- End Pagination -->
+    </div>
+    @endsection
