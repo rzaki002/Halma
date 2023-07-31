@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\Kategori_produk;
 use App\Models\Order;
 use Illuminate\Http\Request;
@@ -15,7 +16,8 @@ class ProdukController extends Controller
      */
     function __construct()
     {
-        $this->middleware('permission:produk-list|produk-create|produk-edit|produk-delete',
+        $this->middleware(
+            'permission:produk-list|produk-create|produk-edit|produk-delete',
             ['only' => ['index', 'show']]
         );
         $this->middleware('permission:produk-create', ['only' => ['create', 'store']]);
@@ -102,7 +104,7 @@ class ProdukController extends Controller
 
         $input = $request->all();
 
-        if ($gambar = $request->file('gambar')) {
+        if ($gambar = $request->file('file')) {
             $detinationPath = 'gambar/';
             $profileGambar = date('YmdHis') . "." . $gambar->getClientOriginalExtension();
             $gambar->move($detinationPath, $profileGambar);
@@ -127,15 +129,33 @@ class ProdukController extends Controller
             ->with('success', 'Produk deleted susccesfully');
     }
 
-    public function detail_produk(Produk $produk){
-        $produks = Produk::where('id',$produk);
-        if (!$produks){
+
+
+    public function show_data_by_id($id)
+    {
+        try {
+            // Gantikan 'Produk' dengan model yang sesuai
+            $produk = Produk::find($id);
+
+            if ($produk) {
+                // Jika produk ditemukan, kembalikan data dalam bentuk JSON
+                return response()->json(['status' => 'success', 'data' => $produk]);
+            } else {
+                // Jika produk tidak ditemukan, kembalikan pesan error dalam bentuk JSON
+                return response()->json(['status' => 'error', 'message' => 'Produk tidak ditemukan'], 404);
+            }
+        } catch (\Exception $e) {
+            // Jika terjadi kesalahan, kembalikan pesan error dalam bentuk JSON
+            return response()->json(['status' => 'error', 'message' => $e->getMessage()], 500);
+        }
+    }
+    public function detail_produk(Produk $produk)
+    {
+        $produks = Produk::where('id', $produk);
+        if (!$produks) {
             abort(404);
         }
-        return view("auth.customer_page.index",compact('produks'));
+        return view("auth.customer_page.index", compact('produks'));
     }
-    public function keranjang(){
-        $produkUser = Order::where('id_customer',Auth::user()->id)->get();
-        return view('produks.keranjang',compact('produkUser'));
-    }
+
 }
