@@ -10,11 +10,11 @@ class Produk extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama', 
-        'id_kategori', 
-        'harga', 
-        'keterangan', 
-        'id_satuan', 
+        'nama',
+        'id_kategori',
+        'harga',
+        'keterangan',
+        'id_satuan',
         'gambar',
     ];
 
@@ -24,4 +24,12 @@ class Produk extends Model
     public function kategori(){
         return $this->belongsTo(Kategori_produk::class,'id');
     }
+
+    public function order(){
+        return $this->hasOne(Order::class,'id_produk');
+    }
+
+    public function orderdetail(){{
+        return $this->hasMany(Order_detail::class,'id_produk','id');
+    }}
 }

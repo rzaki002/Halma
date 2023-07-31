@@ -44,22 +44,25 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'no_hp' => 'required',
-            'nama' => 'required',
+            // 'no_hp' => 'required',
+            'name' => 'required',
             'email' => 'required',
             'password' => 'required',
         ]);
 
+        $input = $request->all();
         Customer::create([
-            "no_hp" => $request->no_hp,
-            "nama" => $request->nama,
-            "email" => $request->email,
-            "password" => $request->password
+            "no_hp" => '83018039',
+            "nama" => $input['name'],
+            "email" => $input['email'],
+            "password" => bcrypt($input['password'])
         ]);
 
+        // dd($input);
         $data = [
-            'name'=> $request->nama,
-            'password'=>bcrypt($request->password)
+            'name'=> $input['name'],
+            'email'=>$input['email'],
+            'password'=>bcrypt($input['password'])
         ];
         $user = User::create($data);
         $role = Role::where('name','User')->first();
@@ -69,7 +72,7 @@ class CustomerController extends Controller
         }else{
             $user->assignRole([$role->id]);
         }
-        return redirect()->route('customers.index')
+        return redirect()->route('login')
             ->with('success', 'Customers created successfully.');
     }
 
