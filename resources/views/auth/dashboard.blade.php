@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="text-end">
                                         Products
-                                        <h2 class="counter">60</h2>
+                                        <h2 class="counter">{{$jumlah_produks}}</h2>
                                     </div>
                                 </div>
                             </div>

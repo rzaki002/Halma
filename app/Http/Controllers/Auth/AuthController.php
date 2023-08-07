@@ -84,7 +84,11 @@ class AuthController extends Controller
     public function dashboard()
     {
         if (Auth::check() && Auth::user()->hasRole("Admin")) {
-            return view('auth.dashboard');
+
+            //tambahkan ini bro
+            $jumlah_produks = Produk::all()->count();
+            
+            return view('auth.dashboard',compact('jumlah_produks'));
         }else if(Auth::check() && Auth::user()->hasRole("User")){
             $produks = Produk::all();
             return view("auth.customer_page.index",compact('produks'));
