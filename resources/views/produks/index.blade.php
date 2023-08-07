@@ -20,7 +20,9 @@
         </div>
     @endif
 
-    <table class="table table-bordered">
+    <div class="card">
+        <div class="table-responsive">
+    <table  class="table table-striped" >
         <tr>
             <th>No</th>
             <th>Nama</th>
@@ -32,31 +34,33 @@
             <th width="280px">Action</th>
         </tr>
         @foreach ($produks as $produk)
-        {{-- <?php dd($produk->kategori);?> --}}
+        {{--  --}}
             <tr>
                 <td>{{ ++$i }}</td>
                 <td>{{ $produk->nama }}</td>
-                <td>{{ $produk->kategori}}</td>
+                <td>{{ $produk->kategori?->id_kategori}}</td>
                 <td>{{ $produk->harga }}</td>
-                <td>{{ $produk->satuan}}</td>
-                <td>{{ $produk->keterangan }}</td>
+                <td>{{ $produk->satuan?->id_satuan}}</td>
+                <td class="m-5">{{ $produk->keterangan }}</td>
                 <td><img src="/gambar/{{ $produk->gambar }}" width="100px" /></td>
                 <td>
                     <form action="{{ route('produks.destroy', $produk->id) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('produks.show', $produk->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('produks.show', $produk->id) }}"><i class="bi bi-eye-fill"></i></a></a>
 
-                        <a class="btn btn-primary" href="{{ route('produks.edit', $produk->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('produks.edit', $produk->id) }}"><i class="bi bi-pencil-square"></i></a></a>
 
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger"><i class="bi bi-trash-fill"></i</button>
                     </form>
                 </td>
             </tr>
         @endforeach
     </table>
-
+        </div>
+    </div>
+</div>
     {!! $produks->links() !!}
 @endsection

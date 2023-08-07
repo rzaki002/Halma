@@ -25,7 +25,9 @@
 @endif
 
 
-<table class="table table-bordered">
+<div class="card">
+  <div class="table-responsive">
+<table  class="table table-striped" >
  <tr>
    <th>No</th>
    <th>Name</th>
@@ -64,8 +66,9 @@ route('users.edit',$user->id) }}">Edit</a>
  @endforeach
 </table>
 
-
+  </div>
+</div>
 {!! $data->render() !!}
 
-</div>
+</>
 @endsection

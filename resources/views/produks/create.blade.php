@@ -36,7 +36,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Id Kategori:</strong>
-                    <textarea class="form-control" style="height:150px" name="id_kategori" placeholder="Id Kategori"></textarea>
+                    <input type="text" name="id_kategori" class="form-control" placeholder="Id Kategori">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -54,7 +54,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Id Satuan:</strong>
-                    <textarea class="form-control" style="height:150px" name="id_satuan" placeholder="Id Satuan"></textarea>
+                    <input type="text" name="id_satuan" class="form-control" placeholder="Id Satuan">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

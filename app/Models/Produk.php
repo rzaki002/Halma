@@ -21,10 +21,13 @@ class Produk extends Model
     public function satuan(){
         return $this->belongsTo(Satuan::class,'id');
     }
-    public function kategori(){
-        return $this->belongsTo(Kategori_produk::class,'id');
-    }
+    // public function kategori(){
+    //     return $this->belongsTo(Kategori_produk::class,'id');
+    // }
 
+    public function kategori(){
+        return $this->hasOne(Kategori_produk::class,'id_kategori');
+    }
     public function order(){
         return $this->hasOne(Order::class,'id_produk');
     }

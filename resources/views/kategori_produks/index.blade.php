@@ -36,15 +36,15 @@
                 <td>
                     <form action="{{ route('kategori_produks.destroy', $kategori_produk->id) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('kategori_produks.show', $kategori_produk->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('kategori_produks.show', $kategori_produk->id) }}"><i class="bi bi-eye-fill"></i></a>
 
                         <a class="btn btn-primary"
-                            href="{{ route('kategori_produks.edit', $kategori_produk->id) }}">Edit</a>
+                            href="{{ route('kategori_produks.edit', $kategori_produk->id) }}"><i class="bi bi-pencil-square"></i></a>
 
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
                     </form>
                 </td>
             </tr>

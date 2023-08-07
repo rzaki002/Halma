@@ -32,21 +32,28 @@ class PembayaranController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'id_order' => 'required',
-            'jumlah_bayar' => 'required',
-            'bukti_tf' => 'required',
-            'metode_bayar' => 'required',
-        ]);
 
-        Pembayaran::created([
-            'id_order' => $request->id_order,
-            'jumlah_bayar' => $request->jumlah_bayar,
-            'bukti_tf' => $request->bukti_tf,
-            'metode_bayar'=>$request->metode_bayar
-        ]);
-        return redirect()->route('pembayarans.index')
-        ->with('success', 'Pembayaran created succesfully');
+        $input = $request->all();
+
+        // return response()->json([
+        //     'status'=>"succes",
+        //     'data'=> $input
+        // ]);
+        // $request->validate([
+        //     'id_order' => 'required',
+        //     'jumlah_bayar' => 'required',
+        //     'bukti_tf' => 'required',
+        //     'metode_bayar' => 'required',
+        // ]);
+
+        // Pembayaran::created([
+        //     'id_order' => $input['id_order'],
+        //     'jumlah_bayar' => $dc->orderdetail->harga,
+        //     'bukti_tf' => $request->bukti_tf,
+        //     'metode_bayar'=>$request->metode_bayar
+        // ]);
+        // return redirect()->route('pembayarans.index')
+        // ->with('success', 'Pembayaran created succesfully');
     }
 
     /**
@@ -92,7 +99,7 @@ class PembayaranController extends Controller
             ->with('success', 'Pembayaran deleted susccesfully');
     }
 
-    public function pembayaran(Request $request){
+    public function buying(Request $request){
         $input = $request->all();
 
         Pembayaran::create([
@@ -102,9 +109,10 @@ class PembayaranController extends Controller
             'metode_bayar'=>$input['payment_type']
         ]);
 
-        return response()->json([
-            'status'=>"success",
-            'data'=> $input
-        ]);
+        // return response()->json([
+        //     'status'=>"success",
+        //     'data'=> $input
+        // ]);
+        return view('pembayarans.index', compact('pembayaran'));
     }
 }

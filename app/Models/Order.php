@@ -20,7 +20,7 @@ class Order extends Model
     ];
 
     public function customer(){
-        return $this->belongsTo(Customer::class,'id');
+        return $this->hasOne(Customer::class,'id','id_customer');
     }
 
     public function orderdetail(){

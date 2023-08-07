@@ -1,4 +1,4 @@
-@extends('customers.layout')
+@extends('auth.admin.app')
 
 @section('content')
     <div class="row">
@@ -18,7 +18,9 @@
         </div>
     @endif
 
-    <table class="table table-bordered">
+    <div class="card">
+        <div class="table-responsive">
+    <table  class="table table-striped" >
         <tr>
             <th>No</th>
             <th>Nama</th>
@@ -37,19 +39,21 @@
                 <td>
                     <form action="{{ route('customers.destroy', $customer->id) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('customers.show', $customer->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('customers.show', $customer->id) }}"><i class="bi bi-eye-fill"></i></a></a>
 
-                        <a class="btn btn-primary" href="{{ route('customers.edit', $customer->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('customers.edit', $customer->id) }}"><i class="bi bi-pencil-square"></i></a>
 
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
                     </form>
                 </td>
             </tr>
         @endforeach
     </table>
+        </div>
+    </div>
 
     {!! $customers->links() !!}
 @endsection

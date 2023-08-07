@@ -38,7 +38,7 @@ Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard')
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::resource('produks', ProdukController::class);
 Route::get('show_produk_by_id/{id}', [ProdukController::class, 'show_data_by_id'])->name('showDataById');
-Route::get('keranjang', [OrderController::class, 'keranjang']);
+Route::get('keranjang', [OrderController::class, 'keranjang'])->name('keranjang');
 Route::resource('satuans', SatuanController::class);
 Route::resource('kategori_produks', Kategori_produkController::class);
 Route::resource('customers', CustomerController::class);
@@ -50,4 +50,8 @@ Route::get('customer_page/index', [ProdukController::class, 'detail_produk'])->n
 Route::resource('pembayarans', PembayaranController::class);
 Route::post('add-cart',[OrderController::class,'addToCart'])->name('add.cart');
 Route::get('checkout/{id}',[OrderController::class,'checkout'])->name('chekout');
+Route::post('buy',[PembayaranController::class,'store'])->name('pembayaran.buy');
 // Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout');
+Route::get('cariproduk',[ProdukController::class,'cariproduk'])->name('cariproduk');
+Route::get('cetak_laporan',[Kategori_produkController::class,'cetak_laporan'])->name('cetak_laporan');
+Route::post('updatePembayaran/{id}',[OrderController::class,'updatePembayaran'])->name('pembayaran.updatePembayaran');

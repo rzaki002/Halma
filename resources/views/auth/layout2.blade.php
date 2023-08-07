@@ -17,6 +17,7 @@
     <link id="pagestyle" href="{{ asset('argon/assets/css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
         <!-- Aos Animation Css -->
         <link rel="stylesheet" href="{{ asset('hope-ui/assets/vendor/aos/dist/aos.css') }}" />
+        <link rel="stylesheet" href="{{ asset('hope-ui/assets/css/dark.min.css') }}" />
 
 </head>
 

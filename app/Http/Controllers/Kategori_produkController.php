@@ -90,4 +90,8 @@ class Kategori_produkController extends Controller
         return redirect()->route('kategori_produks.index')
             ->with('success', 'Kategori Produk deleted susccesfully');
     }
+
+    public function cetak_laporan(){
+        return view('kategori_produks.laporan_kategori_produk');
+    }
 }

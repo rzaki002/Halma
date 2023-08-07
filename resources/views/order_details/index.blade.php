@@ -1,9 +1,9 @@
-@extends('order_details.layout')
+@extends('auth.admin.app')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+            <div class="pull-left pt-5">
                 <h2>Order Detail Produk</h2>
             </div>
             <div class="pull-right">
@@ -18,7 +18,9 @@
         </div>
     @endif
 
-    <table class="table table-bordered">
+    <div class="card">
+        <div class="table-responsive">
+    <table  class="table table-striped" >
         <tr>
             <th>No</th>
             <th>Id Order</th>
@@ -54,6 +56,8 @@
             </tr>
         @endforeach
     </table>
+</div>
+    </div>
 
     {!! $order_details->links() !!}
 @endsection

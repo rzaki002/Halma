@@ -17,12 +17,12 @@
                 <tr>
                     <th scope="row">1</th>
                     <td>
-                        <img src="{{ asset('gambar/') . '/' . $ou->orderdetail->file }}" alt="" width="100px">
+                        <img src="{{ asset('gambar/') . '/' . $ou->orderdetail?->file }}" alt="" width="100px">
                     </td>
                     {{-- <td>{{ $ou->orderdetail->produk->nama }}</td> --}}
-                    <td>{{ $ou->orderdetail->produk->nama }}</td>
-                    <td>{{ $ou->orderdetail->harga }}</td>
-                    <td>{{ $ou->orderdetail->qty }}</td>
+                    <td>{{ $ou->orderdetail?->produk->nama }}</td>
+                    <td>{{ $ou->orderdetail?->harga }}</td>
+                    <td>{{ $ou->orderdetail?->qty }}</td>
                     @if ($ou->status_bayar == null)
                         <td>Belum Di Bayar</td>
                     @else
