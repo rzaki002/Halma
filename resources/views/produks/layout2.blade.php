@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{ asset('halma-fe/assets/css/vendor/vendor.min.css') }}">
     <link rel="stylesheet" href="{{ asset('halma-fe/assets/css/plugins/plugins.min.css') }}">
     <link rel="stylesheet" href="{{ asset('halma-fe/assets/css/style.min.css') }}">
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="{{ config('midtrans.client_key') }}"></script>
     <!-- <script src="https://kit.fontawesome.com/e12cc9d551.js" crossorigin="anonymous"></script> -->
 </head>
 
@@ -42,23 +44,24 @@
                                             class="font-semibold text-white-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 p-1">Home</a>
                                         <a href="{{ url('/logout') }}"
                                             class="font-semibold text-white-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 p-1">logout</a> --}}
-                                    
-                                </div>
-                            
-                            <ul class="nav navbar-nav ms-auto">
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User</a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a href="#" class="dropdown-item">Reports</a>
-                                        <a href="#" class="dropdown-item">Keranjang</a>
-                                        <a href="#" class="dropdown-item">Settings</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a href="{{ url('/logout') }}" class="dropdown-item">Logout</a>
+
                                     </div>
-                                </li>
-                            </ul>
-                            @else
-                                    @endauth
+
+                                    <ul class="nav navbar-nav ms-auto">
+                                        <li class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle"
+                                                data-bs-toggle="dropdown">{{Auth::user()->name}}</a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a href="#" class="dropdown-item">Reports</a>
+                                                <a href="#" class="dropdown-item">Keranjang</a>
+                                                <a href="#" class="dropdown-item">Settings</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="{{ url('/logout') }}" class="dropdown-item">Logout</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                @else
+                                @endauth
                         </div>
                         @endif
 
@@ -545,7 +548,7 @@
                 <li><a href="cart.html" class="btn btn-block btn-golden">Lihat Keranjang</a></li>
                 <li><a href="compare.html" class=" btn btn-block btn-golden mt-5">Checkout</a></li>
             </ul>
-            
+
         </div> <!-- End  Offcanvas Addcart Wrapper -->
 
     </div> <!-- End  Offcanvas Addcart Section -->
@@ -658,7 +661,7 @@
         </div>
     </div> <!-- ...:::: End Breadcrumb Section:::... -->
 
-     {{-- yield --}}
+    {{-- yield --}}
     @yield('content')
     <!-- Start Footer Section -->
     <footer class="footer-section footer-bg">
@@ -793,6 +796,7 @@
         </div>
     </footer>
     <!-- End Footer Section -->
+
 
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->

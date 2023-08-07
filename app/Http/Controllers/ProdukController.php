@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\Kategori_produk;
 use App\Models\Order;
 use Illuminate\Http\Request;
@@ -13,20 +14,22 @@ class ProdukController extends Controller
     /**
      * Display a listing of the resource.
      */
-    function __construct()
-    {
-        $this->middleware('permission:produk-list|produk-create|produk-edit|produk-delete',
-            ['only' => ['index', 'show']]
-        );
-        $this->middleware('permission:produk-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:produk-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:produk-delete', ['only' => ['destroy']]);
-    }
+    // function __construct()
+    // {
+    //     $this->middleware(
+    //         'permission:produk-list|produk-create|produk-edit|produk-delete',
+    //         ['only' => ['index', 'show']]
+    //     );
+    //     $this->middleware('permission:produk-create', ['only' => ['create', 'store']]);
+    //     $this->middleware('permission:produk-edit', ['only' => ['edit', 'update']]);
+    //     $this->middleware('permission:produk-delete', ['only' => ['destroy']]);
+    // }
     public function index()
     {
         $produks = Produk::latest()->paginate(5);
-        return view('produks.index', compact('produks'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        dd($produks);
+        // return view('produks.index', compact('produks'))
+        //     ->with('i', (request()->input('page', 1) - 1) * 5);
         // $produk = Produk::all();
         // dd($produk->kategori);
     }
@@ -71,11 +74,12 @@ class ProdukController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Produk $produk)
+    public function show(Produk $produk)    
     {
         $produks = Produk::all();
+        // dd($produks);
         $formattedAmount = number_format($produk->harga, 0, ',', '.');
-        return view('produks.show', compact('produk', 'formattedAmount'));
+        return view('home.index', compact('produks', 'formattedAmount'));
     }
 
     /**
@@ -102,7 +106,7 @@ class ProdukController extends Controller
 
         $input = $request->all();
 
-        if ($gambar = $request->file('gambar')) {
+        if ($gambar = $request->file('file')) {
             $detinationPath = 'gambar/';
             $profileGambar = date('YmdHis') . "." . $gambar->getClientOriginalExtension();
             $gambar->move($detinationPath, $profileGambar);
@@ -127,15 +131,51 @@ class ProdukController extends Controller
             ->with('success', 'Produk deleted susccesfully');
     }
 
-    public function detail_produk(Produk $produk){
-        $produks = Produk::where('id',$produk);
-        if (!$produks){
+
+
+    public function show_data_by_id($id)
+    {
+        try {
+            // Gantikan 'Produk' dengan model yang sesuai
+            $produk = Produk::find($id);
+
+            if ($produk) {
+                // Jika produk ditemukan, kembalikan data dalam bentuk JSON
+                return response()->json(['status' => 'success', 'data' => $produk]);
+            } else {
+                // Jika produk tidak ditemukan, kembalikan pesan error dalam bentuk JSON
+                return response()->json(['status' => 'error', 'message' => 'Produk tidak ditemukan'], 404);
+            }
+        } catch (\Exception $e) {
+            // Jika terjadi kesalahan, kembalikan pesan error dalam bentuk JSON
+            return response()->json(['status' => 'error', 'message' => $e->getMessage()], 500);
+        }
+    }
+    public function detail_produk(Produk $produk)
+    {
+        $produks = Produk::where('id', $produk);
+        if (!$produks) {
             abort(404);
         }
-        return view("auth.customer_page.index",compact('produks'));
+        return view("home.index", compact('produks'));
     }
-    public function keranjang(){
-        $produkUser = Order::where('id_customer',Auth::user()->id)->get();
-        return view('produks.keranjang',compact('produkUser'));
+    public function keranjang()
+    {
+        $produkUser = Order::where('id_customer', Auth::user()->id)->get();
+        return view('produks.keranjang', compact('produkUser'));
+        // return view("auth.customer_page.index", compact('produks'));
     }
+
+    public function cariproduk(Request $request)
+    {
+        $input = $request->all();
+        $keyword = $input['keyword'];
+        $produks = Produk::where('nama', 'like', "%$keyword%")->get();
+
+        // return json_encode($data_produk);
+        // $produks = Produk::all();
+        return view("home.index", compact('produks'));
+
+    }
+
 }

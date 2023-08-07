@@ -1,4 +1,4 @@
-@extends('orders.layout')
+@extends('auth.admin.app')
 
 @section('content')
     <div class="row">
@@ -51,14 +51,23 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Id Customer:</strong>
-                    <input type="text" name="id_customer" class="form-control" placeholder="Id Customer"
-                        value="{{ $order->id_customer }}">
+                    {{-- <input type="text" name="id_customer" class="form-control" placeholder="Id Customer" --}}
+                        {{-- value="{{ $order->id_customer }}"> --}}
+
+                        <select name="id_customer" class="form-control dropdown">
+                            <option value="">-- Select Customer --</option>
+                            @foreach ($customers as $customer)
+                                <option value="{{$customer->id}}" <?php if($customer->id==$order->id_customer) echo "selected" ?>>
+                                    {{$customer->nama}}
+                                </option>                        
+                            @endforeach
+                        </select>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Catatan:</strong>
-                    <textarea class="form-control" style="height:150px" name="catatan" placeholder="Catatan" value="{{ $order->catatan }}"></textarea>
+                    <textarea class="form-control" style="height:150px" name="catatan" placeholder="Catatan" value="">{{ $order->catatan }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

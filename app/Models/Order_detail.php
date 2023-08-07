@@ -17,9 +17,12 @@ class Order_detail extends Model
         'file',
     ];
 
-    // belongsto order
-    public function order()
-    {
-        return $this->belongsTo(Order::class, 'id_order');
+    public function order(){
+        return $this->hasOne(Order::class,'id');
     }
+
+    public function produk(){
+        return $this->belongsTo(Produk::class,'id_produk','id');
+    }
+
 }

@@ -87,7 +87,7 @@ class AuthController extends Controller
             return view('auth.dashboard');
         }else if(Auth::check() && Auth::user()->hasRole("User")){
             $produks = Produk::all();
-            return view("auth.customer_page.index",compact('produks'));
+            return view("home.index",compact('produks'));
         }
 
         return redirect("login")->withSuccess('Opps! You do not have access');
@@ -119,4 +119,5 @@ class AuthController extends Controller
 
         return Redirect('/');
     }
+
 }

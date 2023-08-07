@@ -3,7 +3,7 @@
 @section('content')
     <main class="main-content  mt-0">
         <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg img-fluid gradient-main animated-scaleX"
-            style="background-image: url('{{asset ('hope-ui/assets/images/curved2.jpg')}}'); background-position: top; background-size: 100vh;">
+            style="background-image: url('{{ asset('hope-ui/assets/images/curved2.jpg') }}'); background-position: top; background-size: 100vh;">
             <span class="mask bg-gradient-dark opacity-6"></span>
             <div class="container">
                 <div class="row justify-content-center">
@@ -82,24 +82,25 @@
                         <div class="card-body">
                             <form action="{{ route('register.post') }}" method="POST">
                                 @csrf
-                                @method('PUT')
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Name" aria-label="Name" id="name" name="name">
+                                    <input type="text" class="form-control" placeholder="Name" aria-label="Name"
+                                        id="name" name="name">
                                     @if ($errors->has('name'))
-                                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                                        <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" id="email_address" name="email" class="form-control" placeholder="Email" aria-label="Email">
+                                    <input type="email" id="email_address" name="email" class="form-control"
+                                        placeholder="Email" aria-label="Email">
                                     @if ($errors->has('email'))
-                                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
                                     @endif
                                 </div>
                                 <div class="mb-3">
-                                    <input type="password" id="password" name="password" class="form-control" placeholder="Password"
-                                        aria-label="Password">
-                                        @if ($errors->has('password'))
-                                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                                    <input type="password" id="password" name="password" class="form-control"
+                                        placeholder="Password" aria-label="Password">
+                                    @if ($errors->has('password'))
+                                        <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
                                 </div>
                                 <div class="form-check form-check-info text-start">

@@ -29,6 +29,8 @@
 
     <!-- RTL Css -->
     <link rel="stylesheet" href="{{ asset('hope-ui/assets/css/rtl.min.css') }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
 
 
 </head>
@@ -65,6 +67,15 @@
                             </svg>
                         </i>
                     </div>
+                    <div class="input-group search-input">
+                      <span class="input-group-text" id="search-input">
+                        <svg class="icon-18" width="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+                            <path d="M18.0186 18.4851L21.5426 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </span>
+                      <input type="search" class="form-control" placeholder="Search...">
+                    </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="mb-2 navbar-nav ms-auto align-items-center navbar-list mb-lg-0">
                             <li class="nav-item dropdown">
@@ -88,8 +99,8 @@
                                         alt="User-Profile"
                                         class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
-                                        <h6 class="mb-0 caption-title">Admin</h6>
-                                        <p class="mb-0 caption-sub-title">Halma</p>
+                                        <h6 class="mb-0 caption-title">{{ Auth::user()->name }}</h6>
+                                        
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -295,8 +306,8 @@
                       <span class="mt-2">Pill One Side</span>
                     </div>
                     <div class="text-center">
-                       <img src="{{asset('')}}/assets/images/settings/dark/09.png" alt="pill-all" class="mode dark-img img-fluid btn-border p-0 flex-column" data-setting="sidebar" data-name="sidebar-item" data-value="navs-pill-all">
-                       <img src="{{asset('')}}/assets/images/settings/light/08.png" alt="pill-all" class="mode light-img img-fluid btn-border p-0 flex-column" data-setting="sidebar" data-name="sidebar-item" data-value="navs-pill-all">
+                       <img src="{{asset('hope-ui/assets/images/settings/dark/09.png')}}" alt="pill-all" class="mode dark-img img-fluid btn-border p-0 flex-column" data-setting="sidebar" data-name="sidebar-item" data-value="navs-pill-all">
+                       <img src="{{asset('hope-ui/assets/images/settings/light/08.png')}}" alt="pill-all" class="mode light-img img-fluid btn-border p-0 flex-column" data-setting="sidebar" data-name="sidebar-item" data-value="navs-pill-all">
                       <span class="mt-2">Pill All</span>
                     </div>
                   </div>
@@ -364,6 +375,9 @@
 
     <!-- App Script -->
     <script src="{{ asset('hope-ui/assets/js/hope-ui.js') }}" defer></script>
+    {{-- fontawesome --}}
+    <script src="https://example.com/fontawesome/v6.4.2/js/all.js" data-auto-replace-svg="nest"></script>
+
 
 </body>
 

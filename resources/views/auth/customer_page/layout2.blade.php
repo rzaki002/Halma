@@ -47,7 +47,7 @@
                             
                             <ul class="nav navbar-nav ms-auto">
                                 <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User</a>
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{Auth::user()->name}}</a>
                                     <div class="dropdown-menu dropdown-menu-end">
                                         <a href="#" class="dropdown-item">Reports</a>
                                         <a href="#" class="dropdown-item">Settings</a>

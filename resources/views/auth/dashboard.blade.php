@@ -18,7 +18,7 @@
                                     </div>
                                     <div class="text-end">
                                         Customers
-                                        <h2 class="counter">1</h2>
+                                        <h2 class="counter">6</h2>
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="text-end">
                                         User
-                                        <h2 class="counter">80</h2>
+                                        <h2 class="counter">2</h2>
                                     </div>
                                 </div>
                             </div>
@@ -78,13 +78,13 @@
                                     </div>
                                     <div class="text-end">
                                         Category
-                                        <h2 class="counter">45</h2>
+                                        <h2 class="counter">8</h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    {{-- <div class="col-lg-3 col-md-6">
                         <div class="card border-bottom border-4 border-0 border-primary">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -139,10 +139,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <!--last part-->
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-lg-6">
                         <div class="row">
                             <div class="col-md-6">
@@ -312,7 +312,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         {{-- <div class="btn-download">

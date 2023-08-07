@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_customer');
+            $table->foreignId('id_customer')->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->text('catatan');
             $table->string('status');
             $table->enum('status_pengambilan', ['Ambil Sendiri', 'Kirim']);
